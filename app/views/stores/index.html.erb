@@ -1,0 +1,17 @@
+<h1>Random Items if you like it CheckItOut</h1>
+
+<table width="75%">
+  <tr id="list-line-even"> 
+    <th colspan="3" align="left"><h3>Items</h3></th> 
+  <tr>
+  <% for product in @products -%>
+  <tr id="<%= cycle('list-line-odd', 'list-line-even') %>"> 
+          <td><%= image_tag(product.image_url) %></td>
+          <td><h3><%=h product.title %></h3>
+               <%= product.description %>
+          </td>
+          <td>
+              <span class="price" ><%= sprintf("R%0.02f" , product.price) %></span><br /> 
+          </td> 
+  <% end %>
+</table>

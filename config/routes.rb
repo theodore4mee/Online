@@ -1,4 +1,21 @@
 Pro::Application.routes.draw do
+  resources :stores
+
+  resources :prducts
+
+  resources :products
+
+  #get "static_pages/home"
+  match '/home', to: 'static_pages#home'
+
+  #get "static_pages/help"
+  match '/help', to: 'static_pages#help'
+   
+ root to: 'static_pages#home'
+
+  resources :users
+  resources :products
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
@@ -54,5 +71,5 @@ Pro::Application.routes.draw do
 
   # This is a legacy wild controller route that's not recommended for RESTful applications.
   # Note: This route will make all actions in every controller accessible via GET requests.
-  # match ':controller(/:action(/:id))(.:format)'
+  # match ':controller(/:action(/:id(.:format)))'
 end

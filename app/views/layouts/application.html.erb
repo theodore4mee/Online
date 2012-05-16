@@ -1,14 +1,30 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Pro</title>
-  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <title><%= full_title(yield(:title)) %></title>
+  
+  <!--[if lt IE 9]>
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+  <%= stylesheet_link_tag "layout", media: "all" %>
+   <%= stylesheet_link_tag "scaffold", media: "all" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
 </head>
 <body>
-
-<%= yield %>
-
+  <div class="container">
+    <header>
+      <%= image_tag("logo.png", alt: "Shopping Cart Logo:: See n Buy", class: "logo") %>
+      <nav class="Navround">
+        <ul>
+          <li><%= link_to "Home", home_path %></li> 
+          <li><%= link_to "Store", stores_path %></li>
+        </u>
+      </nav>
+    </header>
+    <section class="sectionround">
+      <%= yield %>
+    </section>
+  </div>
 </body>
 </html>

@@ -1,0 +1,37 @@
+<% provide(:title, 'Products Page') %>
+
+<div id="product-list">
+
+
+<h1>Listing products</h1>
+
+<table width="60%"> 
+
+<% for product in @products %>
+  <tr valign="top" id="<%= cycle('list-line-odd', 'list-line-even') %>"> 
+    <td><%= image_tag product.image_url, :class => 'list-image' %></td>
+    <td width="60%">
+        <span id="product_title"><%= product.title %></span><br />
+        <%= product.description %>
+    </td>
+    <td> 
+        <%= link_to 'Show', product %> <br/>
+        <%= link_to 'Edit', edit_product_path(product) %> <br/>
+        <%= link_to 'Destroy', product, confirm: 'Are you sure?', method: :delete %><be />
+        <!--<%= button_to "Add to Cart" , :action => :add_to_cart %>-->
+    </td>
+  </tr>
+<% end %>
+
+
+  <tr>
+    <td colspan="3"><%= link_to 'New Product', new_product_path %> </td>
+  </tr>
+</table>
+
+</div>
+<br />
+
+
+
+

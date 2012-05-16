@@ -1,66 +1,4 @@
-/*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
- * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the top of the
- * compiled file, but it's generally better to create a new file per style scope.
- *
- *= require_self
- *= require_tree .
-*/
-nav {
-float: right;
-background-color: white;
-padding: 0 0.7em;
-white-space: nowrap;
-}
-nav ul {
-margin: 0;
-padding: 0;
-}
-nav ul li {
-list-style-type: none;
-display: inline-block;
-padding: 0.2em 0;
-}
-nav ul li a {
-padding: 0 5px;
-font-weight: bold;
-}
-nav ul li a:visited {
-color: #09c;
-}
-nav ul li a:hover {
-text-decoration: underline;
-}
-    
-    a {
-    color: #09c;
-    text-decoration: none;
-    }
-    a:hover {
-    color: #c9c9c9;
-    text-decoration: underline;
-    }
-    a:visited {
-    color: #069;
-    }
-    
-    .round {
-    -moz-border-radius: 10px;
-    -webkit-border-radius: 10px;
-    border-radius: 10px;
-    }
-    
-    
-    .layouts{ border: 1px solid red;
-              margin: auto auto auto auto;
-              width: 75%;}
-    
-    body {
+body {
   background-color: #fff;
   color: #333;
   font-family: verdana, arial, helvetica, sans-serif;
@@ -148,8 +86,8 @@ div {
       #list-line-even{ background-color: #F3F3F3; }
       #list-line-odd{ background-color: #fff; }
     
-     
     
+    #list-line-odd{background: #ccc;}
     
     
     
